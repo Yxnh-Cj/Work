@@ -1,53 +1,44 @@
-# Miscellaneous
-*.class
-*.lock
-*.log
-*.pyc
-*.swp
-.buildlog/
-.history
+# ==============================
+# Flutter 项目 .gitignore（含 JetBrains 支持）
+# ==============================
 
-cookie
-.idea/
+# ---------- Flutter/Dart 相关 ----------
+# Flutter repo-specific (开发 Flutter SDK 时才需要，普通项目可删)
+# /bin/cache/
+# /bin/internal/bootstrap.bat
+# /bin/internal/bootstrap.sh
+# /bin/mingit/
+# /dev/benchmarks/mega_gallery/
+# /dev/bots/.recipe_deps
+# /dev/bots/android_tools/
+# /dev/devicelab/ABresults*.json
+# /dev/docs/doc/
+# /dev/docs/flutter.docs.zip
+# /dev/docs/lib/
+# /dev/docs/pubspec.yaml
+# /dev/integration_tests/**/xcuserdata
+# /dev/integration_tests/**/Pods
+# /packages/flutter/coverage/
+# version
+# analysis_benchmark.json
+# .packages.generated
 
-# Flutter repo-specific
-/bin/cache/
-/bin/internal/bootstrap.bat
-/bin/internal/bootstrap.sh
-/bin/mingit/
-/dev/benchmarks/mega_gallery/
-/dev/bots/.recipe_deps
-/dev/bots/android_tools/
-/dev/devicelab/ABresults*.json
-/dev/docs/doc/
-/dev/docs/flutter.docs.zip
-/dev/docs/lib/
-/dev/docs/pubspec.yaml
-/dev/integration_tests/**/xcuserdata
-/dev/integration_tests/**/Pods
-/packages/flutter/coverage/
-version
-analysis_benchmark.json
-
-# packages file containing multi-root paths
-.packages.generated
-
-# Flutter/Dart/Pub related
-**/doc/api/
+# Flutter/Dart/Pub 核心忽略
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
-**/generated_plugin_registrant.dart
 .packages
 .pub-preload-cache/
 .pub/
 build/
+**/doc/api/
+**/generated_plugin_registrant.dart
 flutter_*.png
 linked_*.ds
 unlinked.ds
 unlinked_spec.ds
 
-# Android related
+# Android 相关
 **/android/**/gradle-wrapper.jar
 .gradle/
 **/android/captures/
@@ -58,7 +49,7 @@ unlinked_spec.ds
 **/android/key.properties
 *.jks
 
-# iOS/XCode related
+# iOS/Xcode 相关
 **/ios/**/*.mode1v3
 **/ios/**/*.mode2v3
 **/ios/**/*.moved-aside
@@ -105,16 +96,73 @@ unlinked_spec.ds
 **/linux/flutter/generated_plugin_registrant.h
 **/linux/flutter/generated_plugins.cmake
 
-# Coverage
+# 覆盖率 & 符号
 coverage/
-
-# Symbols
 app.*.symbols
 
-# Exceptions to above rules.
+
+# ---------- JetBrains IDE 相关 ----------
+# 用户私有配置（绝对不要提交！）
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# AWS 插件
+.idea/**/aws.xml
+
+# 自动生成文件
+.idea/**/contentModel.xml
+
+# 敏感或高频变动文件
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+# Gradle 配置（若使用 auto-import，建议取消注释下方模块文件）
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# CMake
+cmake-build-*/
+
+# 插件相关
+.idea/**/mongoSettings.xml
+*.iws
+out/
+.idea_modules/
+atlassian-ide-plugin.xml
+.idea/replstate.xml
+.idea/sonarlint/
+.idea/sonarlint.xml
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+.idea/httpRequests
+http-client.private.env.json
+.idea/caches/build_file_checksums.ser
+.idea/.cache/.Apifox_Helper
+.idea/ApifoxUploaderProjectSetting.xml
+.idea/**/copilot.data.migration.*.xml
+
+
+# ---------- 例外规则（重要！）----------
+# 允许共享基础 Xcode 配置
 !**/ios/**/default.mode1v3
 !**/ios/**/default.mode2v3
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
+cookie
+# 允许特定测试目录的 .packages（一般不用改）
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
+
+# 允许团队共享 .idea 中的安全配置（如 runConfigurations）
+# 注意：JetBrains 模板默认不忽略整个 .idea/，所以下面无需额外添加 !
+# 如果你曾手动添加过 ".idea/" 到 .gitignore，请删除它！
