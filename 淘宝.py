@@ -1,19 +1,3 @@
-"""
-[课程内容]: Python爬虫技术帮你获取某宝商品数据 https://www.taobao.com/
-
-[授课老师]: 青灯教育-自游老师   [授课时间]: 20:00  可以点歌 可以问问题
-
-[环境使用]:
-    Python 3.10
-    Pycharm
-
-[模块使用]:
-    requests -> pip install requests
-
-win + R 输入cmd 输入安装命令 pip install 模块名 (如果你觉得安装速度比较慢, 你可以切换国内镜像源)
-先听一下歌 等一下后面进来的同学,20:00 正式开始讲课 [有什么喜欢听得歌曲 也可以在公屏发一下]
-相对应的安装包/安装教程/激活码/使用教程/学习资料/工具插件 可以添加木子老师微信python10010
-"""
 import random
 from urllib.parse import quote
 
