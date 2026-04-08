@@ -6,8 +6,9 @@
 *.swp
 .buildlog/
 .history
-cookie
 
+cookie
+.idea/
 
 # Flutter repo-specific
 /bin/cache/
