@@ -158,7 +158,8 @@ http-client.private.env.json
 !**/ios/**/default.mode2v3
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
-cookie
+*cookie*
+experimental methods/
 # 允许特定测试目录的 .packages（一般不用改）
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock

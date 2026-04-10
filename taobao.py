@@ -27,8 +27,7 @@ cookies = json.loads(str_cookie)
 
 
 def get_sign(eT, page, bc_offset, nt_offset, totalResults):
-    # token = "4c4b87b67923b9e1686a75139b2b45ba"
-    # cookie中的参数值
+    # cookie中的_m_h5_tk参数值
     # token = "ee25fb9576bdfd10bc928dace1862d71"
     # token = re.findall('_m_h5_tk=(.*?)_', cookie)[0]
     token = cookies['_m_h5_tk'].split('_')[0]
