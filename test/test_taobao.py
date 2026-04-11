@@ -23,7 +23,7 @@ from user_agent import generate_user_agent
 # with open('cookie', 'r') as file:
     # str_cookie = file.read()
 # cookies = json.loads(str_cookie)
-cookies = {}
+cookies = {'_m_h5_tk':''}
 
 
 def get_sign(eT, page, bc_offset, nt_offset, totalResults):
