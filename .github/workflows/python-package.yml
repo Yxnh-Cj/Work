@@ -46,4 +46,4 @@ jobs:
       run: |
         # pytest --cov=your_package
         # 3. 关键改进：添加 --cov-report=xml 以便 GitHub 能可视化展示覆盖率
-        pytest -vv --cov=. --cov-report=xml
+        pytest -vv --cov=test/. --cov-report=xml
