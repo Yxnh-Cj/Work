@@ -98,8 +98,8 @@ if __name__ == "__main__":
         "data": str(json.dumps(info, separators=(',', ':')))
     }
     # print(data)
-    sign = get_sign(data['data'])
+    sign = test_get_sign(data['data'])
     # data = json.dumps(data, separators=(',', ':'))
     # print(data)
     # print(sign)
-    get_data(sign)
+    test_get_data(sign)
