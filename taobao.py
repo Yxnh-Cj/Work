@@ -20,11 +20,11 @@ import csv
 from ip_agent import ip_address
 from user_agent import generate_user_agent
 
-with open('cookie', 'r') as file:
-    str_cookie = file.read()
-cookies = json.loads(str_cookie)
+# with open('cookie', 'r') as file:
+    # str_cookie = file.read()
+# cookies = json.loads(str_cookie)
 
-
+cookies = json.loads('{}')
 
 def get_sign(eT, page, bc_offset, nt_offset, totalResults):
     # cookie中的_m_h5_tk参数值

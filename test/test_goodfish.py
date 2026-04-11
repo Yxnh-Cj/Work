@@ -37,8 +37,8 @@ headers = {
 }
 # with open('cookie', 'r') as file:
 #     str_cookie = file.read()
-str_cookie = {}
-# ast.literal_eval(str_cookie)
+str_cookie = '{}'
+# ast.literal_eval'(str_cookie)
 # print(json.loads(str_cookie))
 # print(eval(str_cookie), type(eval(str_cookie)))
 cookies = json.loads(str_cookie)
