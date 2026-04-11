@@ -35,9 +35,9 @@ headers = {
     # "sec-gpc": "1",
     "user-agent": generate_user_agent()
 }
-with open('cookie', 'r') as file:
-    str_cookie = file.read()
-
+# with open('cookie', 'r') as file:
+#     str_cookie = file.read()
+str_cookie = {}
 # ast.literal_eval(str_cookie)
 # print(json.loads(str_cookie))
 # print(eval(str_cookie), type(eval(str_cookie)))
