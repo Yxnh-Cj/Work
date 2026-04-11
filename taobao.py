@@ -150,7 +150,7 @@ def get_content(page, bc_offset, nt_offset, totalResults):
     # print(text)
     """解析数据"""
     # 提取json数据
-    text_json = re.findall('mtopjsonp6\((.*)', text)[0][:-1]
+    text_json = re.findall(r'mtopjsonp6\((.*)', text)[0][:-1]
     # print(text_json)
 
     # 转成字典数据
