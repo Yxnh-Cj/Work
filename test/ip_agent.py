@@ -24,24 +24,9 @@ def ip_address():
     return params['protocol'],proxies_list
 
 
-def ip_adress_check():
-    # 代码
-    ip_list = ip_address()
-    ip_List = []
-    for ip in ip_list:
-        result = ip_check(ip)
-        ip_newlist = [ip.split(':')[0] for ip in ip_list]
-        if result in ip_newlist:
-            ip_List.append(ip_list[ip_newlist.index(result)])
-            # ip = choice(ip_list)
-            # drissionpage_proxy(ip)
-    print(f'{ip_List}有效！')
-    return ip_List
-
 def main():
     try:
         print(ip_address())
-        # ip_adress_check()
     except Exception as e:
         print(e)
 
