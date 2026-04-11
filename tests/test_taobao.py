@@ -26,7 +26,7 @@ from user_agent import generate_user_agent
 cookies = {'_m_h5_tk':''}
 
 
-def get_sign(eT, page, bc_offset, nt_offset, totalResults):
+def test_get_sign(eT, page, bc_offset, nt_offset, totalResults):
     # cookie中的_m_h5_tk参数值
     # token = "ee25fb9576bdfd10bc928dace1862d71"
     # token = re.findall('_m_h5_tk=(.*?)_', cookie)[0]
@@ -111,7 +111,7 @@ def get_sign(eT, page, bc_offset, nt_offset, totalResults):
     return sign, ep_data
 
 
-def get_content(page, bc_offset, nt_offset, totalResults):
+def test_get_content(page, bc_offset, nt_offset, totalResults):
     """发送请求"""
     # 模拟浏览器
     headers = {

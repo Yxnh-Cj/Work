@@ -43,7 +43,7 @@ str_cookie = '{"_m_h5_tk":""}'
 # print(eval(str_cookie), type(eval(str_cookie)))
 cookies = json.loads(str_cookie)
 timestamp = str(int(time.time()) * 1000)
-def get_sign(params_json):
+def test_get_sign(params_json):
     string = cookies['_m_h5_tk'].split('_')[0] + '&' +  timestamp + '&' + '34839810' + '&' + params_json
 
     # print(string)
@@ -52,7 +52,7 @@ def get_sign(params_json):
     return sign
 
 
-def get_data(sign):
+def test_get_data(sign):
     url = "https://h5api.m.goofish.com/h5/mtop.taobao.idlemtopsearch.pc.search/1.0/"
     params = {
         "jsv": "2.7.2",
