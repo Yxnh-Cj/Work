@@ -165,7 +165,7 @@ def get_content(page, bc_offset, nt_offset, totalResults):
         itemsArray = json_data['data']['itemsArray']
     except Exception as e:
         print(e)
-        exit()
+        return '','','4800'
     # for循环遍历, 提取列表里面的元素
     for index in itemsArray:
         try:
