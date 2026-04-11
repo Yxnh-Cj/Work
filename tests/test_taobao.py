@@ -126,7 +126,7 @@ def test_get_content(page, bc_offset, nt_offset, totalResults):
     proxies = {}
     # 获取当前时间戳
     eT = int(time.time() * 1000)
-    sign, ep_data = get_sign(eT, page, bc_offset, nt_offset, totalResults)
+    sign, ep_data = test_get_sign(eT, page, bc_offset, nt_offset, totalResults)
     # print(sign, ep_data)
     # 查询参数
     params = {
@@ -164,9 +164,9 @@ def test_get_content(page, bc_offset, nt_offset, totalResults):
     # 字典取值, 提取商品信息所在的列表
     try:
         itemsArray = json_data['data']['itemsArray']
-    except Exception as e:
-        print(e)
-        return '','','4800'
+    except KeyError:
+        print('取值错误！')
+        return '', '', '4800'
     # for循环遍历, 提取列表里面的元素
     for index in itemsArray:
         try:
@@ -221,4 +221,4 @@ totalResults = '4800'
 # 构建循环翻页
 for page in range(1, 2):
     print(f'正在采集第{page}页的数据内容')
-    bc_offset, nt_offset, totalResults = get_content(page, bc_offset, nt_offset, totalResults)
+    bc_offset, nt_offset, totalResults = test_get_content(page, bc_offset, nt_offset, totalResults)
