@@ -43,8 +43,7 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Run tests
-      run: pytest
-      # run: |
+      run: |
         # pytest --cov=your_package
         # 3. 关键改进：添加 --cov-report=xml 以便 GitHub 能可视化展示覆盖率
-        # pytest -vv --cov=test/. --cov-report=xml
+        pytest -vv --cov=test/. --cov-report=xml
