@@ -17,7 +17,7 @@ import hashlib
 import time
 # 导入csv模块
 import csv
-from ip_agent import ip_address
+# from ip_agent import ip_address
 from user_agent import generate_user_agent
 
 # with open('cookie', 'r') as file:
@@ -122,7 +122,8 @@ def get_content(page, bc_offset, nt_offset, totalResults):
     }
     # 请求网址
     url = 'https://h5api.m.taobao.com/h5/mtop.relationrecommend.wirelessrecommend.recommend/2.0/'
-    proxies = {ip_address()[0]: random.choice(ip_address()[1])}
+    # proxies = {ip_address()[0]: random.choice(ip_address()[1])}
+    proxies = {}
     # 获取当前时间戳
     eT = int(time.time() * 1000)
     sign, ep_data = get_sign(eT, page, bc_offset, nt_offset, totalResults)

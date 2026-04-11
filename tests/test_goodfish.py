@@ -15,7 +15,7 @@ import random
 import time
 import requests
 from user_agent import generate_user_agent
-from ip_agent import ip_address
+# from ip_agent import ip_address
 import ast
 
 headers = {
@@ -69,7 +69,8 @@ def get_data(sign):
         "spm_cnt": "a21ybx.search.0.0",
         "spm_pre": "a21ybx.search.searchInput.0"
     }
-    proxies = proxies = {ip_address()[0]: random.choice(ip_address()[1])}
+    # proxies = {ip_address()[0]: random.choice(ip_address()[1])}
+    proxies = {}
     response = requests.post(url, headers=headers, cookies=cookies, params=params, data=data, proxies=proxies)
 
     print(response.json())
