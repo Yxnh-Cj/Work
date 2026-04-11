@@ -195,7 +195,7 @@ def get_content(page, bc_offset, nt_offset, totalResults):
 
 
 # 创建文件对象
-product = input('输入查询的商品类别：')
+product = '手机'
 f = open(f'{product}数据.csv', mode='w', encoding='utf-8', newline='')
 # 字典写入的方法
 csv_writer = csv.DictWriter(f, fieldnames=[

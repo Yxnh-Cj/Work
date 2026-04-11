@@ -74,7 +74,7 @@ def get_data(sign):
 
     print(response.json())
 if __name__ == "__main__":
-    keyword = input('输入查询商品名：')
+    keyword = '手机'
     # data = {
     #     "data": "{\"pageNumber\":1,\"keyword\":\"笔记本电脑\",\"fromFilter\":false,\"rowsPerPage\":30,\"sortValue\":\"\",\"sortField\":\"\",\"customDistance\":\"\",\"gps\":\"\",\"propValueStr\":{},\"customGps\":\"\",\"searchReqFromPage\":\"pcSearch\",\"extraFilterValue\":\"{}\",\"userPositionJson\":\"{}\"}"
     # }
