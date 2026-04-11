@@ -44,6 +44,6 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Run tests with pytest
       run: |
-        # pytest --cov=tests/.
+        # pytest --cov=tests
         # 3. 关键改进：添加 --cov-report=xml 以便 GitHub 能可视化展示覆盖率
-        pytest tests/ -vv --cov= . --cov-report=xml
+        pytest tests/ -vv --cov=. --cov-report=xml
